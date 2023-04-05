@@ -1,0 +1,76 @@
+﻿@page
+@model LoginModel
+
+
+
+
+<div class="container" style="max-width:30em;">
+
+    <div class="bg-primary text-center text-white p-2">
+
+    <h4>Log In</h4></div>
+
+    <div class="m-1 text-danger" asp-validation-summary="All"></div>
+
+    <form method="post">
+
+        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">UserName</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="UserName" />
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-8">
+                <input asp-for="Password" type="password" class="form-control" />
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+
+</div>
+
+
+@functions {
+
+    public class LoginModel : PageModel
+    {
+        private SignInManager<IdentityUser> signInManager;
+
+        public LoginModel(SignInManager<IdentityUser> signinMgr)
+        {
+            signInManager = signinMgr;
+        }
+
+        [BindProperty]
+        [Required]
+        public string UserName { get; set; }
+
+        [BindProperty]
+        [Required]
+        public string Password { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string ReturnUrl { get; set; }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (ModelState.IsValid)
+            {
+                Microsoft.AspNetCore.Identity.SignInResult result =
+                    await signInManager.PasswordSignInAsync(UserName, Password,
+                        false, false);
+                if (result.Succeeded)
+                {
+                    return Redirect(ReturnUrl ?? "/");
+                }
+                ModelState.AddModelError("", "Invalid username or password");
+            }
+            return Page();
+        }
+    }
+}

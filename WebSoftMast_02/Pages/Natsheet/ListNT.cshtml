@@ -1,0 +1,72 @@
+﻿@page
+@model ListNTModel
+
+<h5 class="bg-info text-white text-center p-2 mb-3">Список натурных документов</h5>
+
+<table class="table table-sm table-bordered">
+    <tr>
+        <th>TrainNumber</th>
+        <th>Index</th>
+        <th>DateOper</th>
+        <th>Station</th>
+        <th></th>
+    </tr>
+
+    @if (Model.Ls_natSheet.Count() == 0)
+    {
+        <tr><td colspan="4" class="text-center">No NatSheet documents</td></tr>
+    }
+    else
+    {
+        foreach (var item in Model.Ls_natSheet)
+        {
+            <tr>
+                <td>@item.TrainNumber</td>
+                <td>@item.TrainIndex</td>
+                <td>@item.WhenLastOperation</td>
+                <td>@item.ToStationName</td>
+                <td class="text-center">
+                    <form asp-page="ListNT" method="post">
+                        <input type="hidden" name="Id" value="@item.NatSheetId" />
+
+                        <a class="btn btn-sm btn-warning" asp-page="DetailNT"
+                   asp-route-id="@item.NatSheetId" asp-route-mode="edit">Подробно</a>
+                        
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<form class="my-3" enctype="multipart/form-data" action="/api/Webserv/ls-natsheet" method="GET">
+    <input type="submit" value="Выгрузить список в файл Excel" />
+</form>
+
+<a class="btn btn-sm btn-info" asp-page="Upload" asp-route-mode="edit">Загрузить XML</a>
+
+@functions{
+    public class ListNTModel : PageModel
+    {
+        public List<Item_NatSheet> Ls_natSheet { get; set; } = new List<Item_NatSheet>();
+
+
+        public ListNTModel(DataContext context)
+        {
+            foreach (var item in context.NatSheets.OrderBy(p=> p.TrainNumber))
+            {
+                Ls_natSheet.Add(
+                    new Item_NatSheet
+                    {
+                        NatSheetId = item.NatSheetId,
+                        TrainNumber = item.TrainNumber,
+                        TrainIndexCombined = item.TrainIndexCombined,
+                        ToStationName = item.ToStationName,
+                        WhenLastOperation = (DateTime) item.WhenLastOperation 
+                    });
+            }
+        }
+
+    }
+
+}

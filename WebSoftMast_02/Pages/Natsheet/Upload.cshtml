@@ -1,0 +1,108 @@
+﻿@page
+@model UploadModel
+
+<h5>Загрузить натурный лист в формате xml</h5>
+
+
+<div id="DataInfo">
+
+</div>
+
+
+<div>
+
+    <input type="file" id="file" name="file"
+            multiple accept="application/*,text/xml">
+
+    <br /><br />
+    <input type="button" id="btn_upload" value="Загрузить файл" />
+
+</div>
+
+
+<a class="btn btn-secondary mt-3" asp-page="listNt">Back</a>
+
+<script>
+
+    const btn = document.getElementById("btn_upload");
+    btn.onclick = OnClickUpload;
+
+    let userFile = "";
+
+    async function OnClickUpload(e) {
+
+        const userFile = document.getElementById("file").files[0];
+
+        if (userFile == undefined){
+            const err = {
+                result: "ok",
+                file: "-",
+                info: "Не выбран файл"
+            };
+
+            displayData(err)
+
+            return;
+        }
+
+        
+
+        const formData = new FormData();
+        formData.append("user-file", userFile, userFile.name );
+        
+        let response = await fetch("/api/Webserv/upload", {
+            method: "POST",            
+            body: formData
+        });
+
+        if (response.ok) {
+
+            let jsonData = await response.json();
+
+            displayData(jsonData);
+        } 
+        
+    }
+
+
+    function displayData(data) {
+        const dataDiv = document.getElementById("DataInfo");
+
+        dataDiv.innerHTML = "";
+        
+
+        if (data.result === "ok"){
+            const itemDiv = document.createElement("div");
+
+            itemDiv.innerText = data.file + " " + data.info;
+            itemDiv.style.wordWrap = "break-word";
+            dataDiv.appendChild(itemDiv);
+        }
+        else{
+            const arData = data.listerr;
+
+            let i = 0;
+            for(i;i<arData.length;i++ ){
+                const itemDiv = document.createElement("div");
+                
+                const errData = arData[i];
+
+                itemDiv.innerText = 
+                    `Error: ${errData.natSheetId} ${errData.trainNumber} ${errData.whenLastOperation} ${errData.err}`;
+
+                itemDiv.style.wordWrap = "break-word";
+
+                dataDiv.appendChild(itemDiv);
+            }
+
+        }
+
+
+        
+    }
+
+
+</script>
+
+
+

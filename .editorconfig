@@ -1,0 +1,19 @@
+﻿[*.cs]
+
+# CS8600: Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
+dotnet_diagnostic.CS8600.severity = silent
+
+# CS8602: Разыменование вероятной пустой ссылки.
+dotnet_diagnostic.CS8602.severity = silent
+
+# CS8634: Тип не может быть использован как параметр типа в универсальном типе или методе. Допустимость значения NULL для аргумента типа не соответствует ограничению "class".
+dotnet_diagnostic.CS8634.severity = silent
+
+# CS8604: Возможно, аргумент-ссылка, допускающий значение NULL.
+dotnet_diagnostic.CS8604.severity = silent
+
+# IDE0055: Исправить форматирование
+dotnet_diagnostic.IDE0055.severity = silent
+
+# CS8629: Тип значения, допускающего NULL, может быть NULL.
+dotnet_diagnostic.CS8629.severity = silent

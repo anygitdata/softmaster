@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86560-725-98470</TrainIndexCombined>
+    <FromStationName>САРБАЛА</FromStationName>
+    <ToStationName>НАХОДКА (ЭКСП.)</ToStationName>
+    <LastStationName>ЧЕРНОРЕЧЕНСКАЯ</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ОТПРАВЛЕНИЕ  ВАГОНА В СОСТАВЕ ПОЕЗДА СО СТАНЦИИ</LastOperationName>
+    <InvoiceNum>ЭЛ598121</InvoiceNum>
+    <PositionInTrain>33</PositionInTrain>
+    <CarNumber>63731863</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>74700</FreightTotalWeightKg>
+  </row>	  
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86380-177-98570</TrainIndexCombined>
+    <FromStationName>ЧЕРКАСОВ КАМЕНЬ</FromStationName>
+    <ToStationName>МЫС АСТАФЬЕВА (ЭКСП.)</ToStationName>
+    <LastStationName>НОВАЯ</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ОТПРАВЛЕНИЕ  ВАГОНА В СОСТАВЕ ПОЕЗДА СО СТАНЦИИ</LastOperationName>
+    <InvoiceNum>ЭЛ305719</InvoiceNum>
+    <PositionInTrain>23</PositionInTrain>
+    <CarNumber>63678486</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>74950</FreightTotalWeightKg>
+  </row>
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86560-725-98470</TrainIndexCombined>
+    <FromStationName>САРБАЛА</FromStationName>
+    <ToStationName>НАХОДКА (ЭКСП.)</ToStationName>
+    <LastStationName>ЧЕРНОРЕЧЕНСКАЯ</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ОТПРАВЛЕНИЕ  ВАГОНА В СОСТАВЕ ПОЕЗДА СО СТАНЦИИ</LastOperationName>
+    <InvoiceNum>ЭЛ598750</InvoiceNum>
+    <PositionInTrain>9</PositionInTrain>
+    <CarNumber>63671549</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>74700</FreightTotalWeightKg>
+  </row>
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86560-925-98570</TrainIndexCombined>
+    <FromStationName>САРБАЛА</FromStationName>
+    <ToStationName>МЫС АСТАФЬЕВА (ЭКСП.)</ToStationName>
+    <LastStationName>КИРБА</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ПРИБЫТИЕ ВАГОНА В СОСТАВЕ  ПОЕЗДА НА СТАНЦИЮ</LastOperationName>
+    <InvoiceNum>ЭЛ634749</InvoiceNum>
+    <PositionInTrain>51</PositionInTrain>
+    <CarNumber>63670277</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>74700</FreightTotalWeightKg>
+  </row>  
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86560-924-98570</TrainIndexCombined>
+    <FromStationName>САРБАЛА</FromStationName>
+    <ToStationName>МЫС АСТАФЬЕВА (ЭКСП.)</ToStationName>
+    <LastStationName>СЕЛЕНГА</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ОТПРАВЛЕНИЕ  ВАГОНА В СОСТАВЕ ПОЕЗДА СО СТАНЦИИ</LastOperationName>
+    <InvoiceNum>ЭЛ532942</InvoiceNum>
+    <PositionInTrain>36</PositionInTrain>
+    <CarNumber>63666457</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>74700</FreightTotalWeightKg>
+  </row>
+  <row>
+    <TrainNumber>2226</TrainNumber>
+    <TrainIndexCombined>86000-048-98470</TrainIndexCombined>
+    <FromStationName>НОВОКУЗНЕЦК-СОРТИРОВОЧНЫЙ</FromStationName>
+    <ToStationName>НАХОДКА (ЭКСП.)</ToStationName>
+    <LastStationName>БИСКАМЖА</LastStationName>
+    <WhenLastOperation>30.07.2023 14:07:00</WhenLastOperation>
+    <LastOperationName>ПРИБЫТИЕ ВАГОНА В СОСТАВЕ  ПОЕЗДА НА СТАНЦИЮ</LastOperationName>
+    <InvoiceNum>ЭЛ305234</InvoiceNum>
+    <PositionInTrain>50</PositionInTrain>
+    <CarNumber>63652267</CarNumber>
+    <FreightEtsngName>УГОЛЬ КАМЕННЫЙ МАРКИ Т-ТОЩИЙ</FreightEtsngName>
+    <FreightTotalWeightKg>69500</FreightTotalWeightKg>
+  </row>
+  
+</Root>
